@@ -1,0 +1,28 @@
+name: Docker Build and Push
+
+on:
+  push:
+    branches:
+      - master  
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Build Docker image
+      run: docker build -t gcr.io/strange-oxide-413921/backend-service-python:latest .
+      
+    - name: Configure Docker
+      run: |
+        echo $GCLOUD_SERVICE_KEY > /tmp/key.json
+        gcloud auth activate-service-account --key-file /tmp/key.json
+        gcloud config set project strange-oxide-413921
+        
+    - name: Push Docker image to Container Registry
+      run: |
+        gcloud auth configure-docker
+        docker push gcr.io/strange-oxide-413921/backend-service-python:latest
