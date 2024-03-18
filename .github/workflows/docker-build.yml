@@ -13,8 +13,11 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
       
-    - name: Write GCLOUD_SERVICE_KEY to file
-      run: echo "$GCLOUD_SERVICE_KEY" > $env:TEMP\key.json
+    - name: Copy key.json to known location
+      run: cp /tmp/key.json C:\Users\facue\OneDrive\Proyecto Final\Dataset Final Google\Modelo\temp
+
+    - name: Activate service account
+      run: gcloud auth activate-service-account --key-file=C:\Users\facue\OneDrive\Proyecto Final\Dataset Final Google\Modelo\temp
       
     - name: Build Docker image
       run: docker build -t gcr.io/strange-oxide-413921/backend-service-python:latest .
