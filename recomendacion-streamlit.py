@@ -43,7 +43,7 @@ modelo = cargar_modelo_desde_cloud(bucket_name, source_blob_name)
 st.title('Análisis Predictivo de Ubicaciones para Inversiones Hoteleras')
 
 st.markdown("""
-Esta aplicación proporciona una recomendación de inversión basada en un modelo predictivo que analiza la viabilidad de ubicaciones hoteleras en zonas próximas a estadios seleccionados en los Estados Unidos. Utilizando datos enriquecidos de Google Maps y Yelp, el modelo compara las puntuaciones y evalúa el potencial de éxito para el crecimiento sostenido de negocios en el contexto del Mundial de Fútbol 2026 y otros eventos significativos.
+Esta aplicación proporciona una recomendación de inversión basada en un modelo predictivo que analiza la viabilidad de ubicaciones hoteleras en zonas próximas a estadios seleccionados en los Estados Unidos. Utilizando datos enriquecidos de Google Maps, el modelo compara las puntuaciones y evalúa el potencial de éxito para el crecimiento sostenido de negocios en el contexto del Mundial de Fútbol 2026 y otros eventos significativos.
 """)
 
 latitude = st.number_input('Latitud', format="%.6f")
