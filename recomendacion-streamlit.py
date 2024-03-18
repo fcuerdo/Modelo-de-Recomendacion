@@ -2,6 +2,17 @@ import streamlit as st
 import pandas as pd
 import joblib
 from google.cloud import storage
+from googlemaps import Client as GoogleMapsClient
+import os
+
+
+google_maps_client = GoogleMapsClient(key=os.getenv('GOOGLE_MAPS_API_KEY'))
+
+def obtener_lugares_cercanos(latitude, longitude, tipo_lugar='restaurant'):
+    # Encuentra lugares cercanos del tipo especificado
+    lugares = google_maps_client.places_nearby(location=(latitude, longitude), type=tipo_lugar, radius=1000)
+    return lugares['results']
+
 
 # Función para evaluar la viabilidad en función del score
 def evaluar_viabilidad(score):
@@ -41,4 +52,18 @@ if st.button('Obtener Recomendación'):
         coordenadas = pd.DataFrame([[latitude, longitude]], columns=['latitude', 'longitude'])
         prediccion = modelo.predict(coordenadas)
         recomendacion = evaluar_viabilidad(prediccion[0])
-        st.success(f'La inversion en esta Zona es: {recomendacion}')
+        st.success(f'La inversión en esta Zona es: {recomendacion}')
+        
+        # Obtener lugares cercanos que podrían mejorar la inversión
+        lugares_cercanos = obtener_lugares_cercanos(latitude, longitude)
+        st.write('Lugares cercanos que podrían mejorar la inversión:')
+        for lugar in lugares_cercanos:
+            st.write(f"- {lugar['name']} ({lugar['vicinity']})")
+
+
+if st.button('Mostrar Mapa'):
+    if not (-90 <= latitude <= 90) or not (-180 <= longitude <= 180):
+        st.error('Las coordenadas proporcionadas no son válidas.')
+    else:
+        mapa_data = pd.DataFrame([[latitude, longitude]], columns=['lat', 'lon'])
+        st.map(mapa_data)
