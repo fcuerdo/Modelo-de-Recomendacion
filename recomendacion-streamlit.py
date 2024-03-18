@@ -45,7 +45,7 @@ st.title('Recomendación de Inversión')
 latitude = st.number_input('Latitud', format="%.6f")
 longitude = st.number_input('Longitud', format="%.6f")
 
-if st.button('Obtener Recomendación'):
+if st.button('Obtén una Recomendación'):
     if not (-90 <= latitude <= 90) or not (-180 <= longitude <= 180):
         st.error('Las coordenadas proporcionadas no son válidas.')
     else:
