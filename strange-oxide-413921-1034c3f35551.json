@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "strange-oxide-413921",
+  "private_key_id": "1034c3f35551c9f4a1c0c3ee12b23f6607634df6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCon55PgFPGIDH7\n8DxMqVwcxjcGyAf1h9kT9s9zfQq6V7OgnB2LwQbJZZCVbEzcadBfODpGr1uzk+wa\nPNC/uaSxp9c49hTl24IdAUpvPKzftlHuC+Jacs8Xa2XkAYrgpm7tahZlspZhFcOJ\nO1B2+phPw48v4LQm9gGstoGGPHNK931rOhFvANnSWSWqZ6ANfW9Q+FW1FB5Q0OXK\nVT1i00vK4j4/pT2MKtp8gQX5CA9ALBNqbLUmncajOER9XNxafe9ytb1zZZCzF918\n/VgK4SRlbRa1EzFLYFEqatuMBr41nUdxaLc6omhRKqdEJjUGflBGYcHnwIAPJ4mH\nPziO3qKzAgMBAAECggEAOyP8iMKn3ynEjinEZFjT+y2T+BdpHzbdrnBWcxlsjU2c\nLR0ECdOR90nda2LYFEgycmsMmWUAgxvC57LjvhK0zjBhPlOkobeay2R8AEamFTJj\nStu1MGbq9jpPOqhF1qPY7QDTyShZMMTK11NL1ebvS655hl/Hn5CRpss942BJSYWw\nU+a+JlVAiNYmsUzG3RTUTzeE7rR9LFG6jOD49U28Mq7u017KytQOAwFZpdj4HSYM\nvr4wMDTASv1vifso/qZtYUR+T0Cy21b98omjyuwaURrtyFQ03hqRXsrqzjSeWK9A\nZ7Huvt7OySVmTa03BH5ZwXSNhpCeNuB4ocIW7UHsJQKBgQDm5s2lPMUExCsggWsm\nBAZqnf8GRGI9N+vJjmRT/NO0chdyqUXT2VFMSRhYaBLJG8IcQPgkUFxN34k2LKUR\nTqAn3w+a0w8gbEJcjc7XcOMBOky1Ag+cABMiHKii0r51LO7ykD3FBl26OPDU+Qci\nSpeH57QBidiX34OjzpiIvOoedwKBgQC689SpwInAWZEwD+ev06+A0H1y8aUq0Ajp\nwJ8PDRSS+1vMnT5Cq/DUNzx0fA1CSZEQkC6yGaHpNgYiQJVHR/4lC7II5tC83lmB\n1J4rGqo4NG3ZdomoxSVfjah0N/ugJz221BmJ9yDtVWhMcr4gAeyVIOmatbNrKaKT\n1KGq1Q8ApQKBgGhZ0oJkrl1zElKEapopo4S3lrOMYCFujl7uvSS/1CVukm49VdNi\nGT2yoxABKMw+gUEnk31F3BFNfsM+9fKWaAbc5j6AOAvdITiW1e3DlLPPVy9OmSNV\nXVBDR2sedviZr/treJ78O4uXhC+bw7+ZmlXPPyia1Yn9d46mJYVWazANAoGBAIrv\n5M8XMQiLR/RBDb1FA7wmteRzo30SyFz38v2bifvF5C5HedrQr5T3S+2Bt9TYmX+G\nt71SgVqw9JQGDSrBXSWo8HHfH6gNUtXC7p04HuLQTAb+KkYL5b+Cpntgk5ctMpcq\nP6ShzY20GGQgLh3ZcDpQEGwStzlf4twcfN1Zo+GlAoGBANVSnE9TTWSAdv3fsXP+\nzzOqdpdjRBO/y1R0r5g1qviYS9j45PcZpZJO6XBgUth//o/TV2oGRGb1DzZ4vWns\nFQuFxOdNQUtE3mRdf4Mqxkhs0RB68htx7XCeXMnkNgsrjeIH5yytoO9uLCLM00kQ\nVAFQQ1Nq+/aZmUwbYd4qOWm2\n-----END PRIVATE KEY-----\n",
+  "client_email": "strange-oxide-413921@appspot.gserviceaccount.com",
+  "client_id": "103084312157980587198",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/strange-oxide-413921%40appspot.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
