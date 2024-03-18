@@ -14,20 +14,19 @@ jobs:
       uses: actions/checkout@v2
       
     - name: Copy key.json to known location
-      run: cp /tmp/key.json "C:\Users\facue\OneDrive\Proyecto Final\Dataset Final Google\Modelo\temp"
+      run: cp ${{ secrets.GCLOUD_SERVICE_KEY }} /tmp/key.json
 
     - name: Activate service account
-      run: gcloud auth activate-service-account --key-file=C:\Users\facue\OneDrive\Proyecto Final\Dataset Final Google\Modelo\temp
+      run: gcloud auth activate-service-account --key-file=/tmp/key.json
       
     - name: Build Docker image
       run: docker build -t gcr.io/strange-oxide-413921/backend-service-python:latest .
       
     - name: Configure Docker
       run: |
-        gcloud auth activate-service-account --key-file /tmp/key.json
+        gcloud auth configure-docker
         gcloud config set project strange-oxide-413921
         
     - name: Push Docker image to Container Registry
       run: |
-        gcloud auth configure-docker
         docker push gcr.io/strange-oxide-413921/backend-service-python:latest
